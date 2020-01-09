@@ -26,15 +26,15 @@ public class PhotoQuiz {
 		// 1. find an image on the internet, and put its URL in a String
 		// variable (from your browser, right click on the image, and select
 		// “Copy Image Address”)
-
+		String URL1 = "http://hdwpro.com/wp-content/uploads/2017/01/3D-Cool-Image.jpg";
 		// 2. create a variable of type "Component" that will hold your image
-
+		String component = URL1;
 		// 3. use the "createImage()" method below to initialize your Component
-
+		createImage(URL1);
 		// 4. add the image to the quiz window
-
+		quizWindow.add(component);
 		// 5. call the pack() method on the quiz window
-
+		
 		// 6. ask a question that relates to the image
 
 		// 7. print "CORRECT" if the user gave the right answer

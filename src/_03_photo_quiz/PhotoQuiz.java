@@ -28,33 +28,44 @@ public class PhotoQuiz {
 		// “Copy Image Address”)
 		String URL1 = "http://hdwpro.com/wp-content/uploads/2017/01/3D-Cool-Image.jpg";
 		// 2. create a variable of type "Component" that will hold your image
-		String component = URL1;
+		Component component = createImage(URL1);
 		// 3. use the "createImage()" method below to initialize your Component
-		createImage(URL1);
+		
 		// 4. add the image to the quiz window
 		quizWindow.add(component);
 		// 5. call the pack() method on the quiz window
-		
+		quizWindow.pack();
 		// 6. ask a question that relates to the image
-
+		String animal = JOptionPane.showInputDialog("What animal is this?");
+		if (animal.equalsIgnoreCase("wolf")) {
+			JOptionPane.showMessageDialog(null, "CORRECT");	
+		} else {
+			JOptionPane.showMessageDialog(null, "WRONG");
+		}
+		
 		// 7. print "CORRECT" if the user gave the right answer
 
 		// 8. print "INCORRECT" if the answer is wrong
 
 		// 9. remove the component from the quiz window (you may not see the
 		// effect of this until step 12)
-
+		quizWindow.remove(component);
 		// 10. find another image and create it (might take more than one line
 		// of code)
-
+		String URL2 = "https://wallpaperaccess.com/full/145035.jpg";
 		// 11. add the second image to the quiz window
-
-		// 12. pack the quiz window
-
+		Component comp = createImage(URL2);
+		quizWindow.add(comp);
+		//12. pack the quiz window
+		quizWindow.pack();
 		// 13. ask another question
-
+		String game = JOptionPane.showInputDialog("What game series is this from?");
 		// 14+ check answer, say if correct or incorrect, etc.
-
+		if (game.equalsIgnoreCase("legends of zelda")) {
+			JOptionPane.showMessageDialog(null, "CORRECT");
+		} else {
+			JOptionPane.showMessageDialog(null, "WRONG");
+		}
 	}
 
 	private Component createImage(String imageUrl) throws MalformedURLException {

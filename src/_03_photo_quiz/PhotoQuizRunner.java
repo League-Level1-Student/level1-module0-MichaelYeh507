@@ -4,9 +4,12 @@ package _03_photo_quiz;
  *    Level 1
  */
 
+import javax.swing.JOptionPane;
 
 public class PhotoQuizRunner {
 	public static void main(String[] args) throws Exception {
 		new PhotoQuiz().run();
+
+		
 	}
 }

@@ -44,22 +44,22 @@ public class SoundEffectsMachine implements ActionListener {
 
 	private void playSound(String fileName) {
 		
-//		AudioClip sound = JApplet.newAudioClip(getClass().getResource(fileName));
-//		sound.play();
+		AudioClip sound = JApplet.newAudioClip(getClass().getResource(fileName));
+		sound.play();
 
-		try {
-			File musicPath = new File(fileName);
-			
-			if (musicPath.exists()) {
-				AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
-				Clip clip = AudioSystem.getClip();
-				JOptionPane.showMessageDialog(null, "Press OK to stop playing");
-				
-			} else {
-				System.out.println("Can't find file");
-			}
-		} catch(Exception ex) {
-			ex.printStackTrace();
-		}
+//		try {
+//			File musicPath = new File(fileName);
+//			
+//			if (musicPath.exists()) {
+//				AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+//				Clip clip = AudioSystem.getClip();
+//				JOptionPane.showMessageDialog(null, "Press OK to stop playing");
+//				
+//			} else {
+//				System.out.println("Can't find file");
+//			}
+//		} catch(Exception ex) {
+//			ex.printStackTrace();
+//		}
 	}
 }
